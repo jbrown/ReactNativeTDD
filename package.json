@@ -14,6 +14,9 @@
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
+    "detox": "^10.0.2",
+    "detox-expo-helpers": "^0.6.0",
+    "expo-detox-hook": "^1.0.10",
     "jest-expo": "^32.0.0",
     "react-native-testing-library": "^1.5.0",
     "react-test-renderer": "^16.7.0"
@@ -21,5 +24,15 @@
   "jest": {
     "preset": "jest-expo"
   },
-  "private": true
+  "private": true,
+  "detox": {
+    "test-runner": "jest",
+    "configurations": {
+      "ios.sim": {
+        "binaryPath": "bin/Exponent.app",
+        "type": "ios.simulator",
+        "name": "iPhone 8"
+      }
+    }
+  }
 }
